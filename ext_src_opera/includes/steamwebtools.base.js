@@ -8,7 +8,7 @@
 
 var url = document.URL;
 
-var CDN = '//mr-vit.github.io/SteamWebTools/';
+var CDN = '//fadillzzz.github.io/SteamWebTools/';
 
 var scripts = [
 	{
