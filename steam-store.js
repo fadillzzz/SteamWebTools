@@ -70,13 +70,14 @@ function init() {
 
 				reqUrl += itemId+'&cc='+cc;
 
-				new window.Ajax.Request( reqUrl, {
-					method: 'get',
-					onSuccess: function( transport ) {
+				$J.ajax({
+					url: reqUrl,
+					type: 'get',
+					success: function( transport ) {
 						var s='';
 
-						if(transport.responseJSON[itemId].success){
-							var data = transport.responseJSON[itemId].data;
+						if(transport[itemId].success){
+							var data = transport[itemId].data;
 							var price = data.price_overview || data.price;
 
 							if(price.discount_percent>0){
